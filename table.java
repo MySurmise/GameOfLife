@@ -17,7 +17,6 @@ public class table {
         
         table gameOfLife;
         int waitTime = 1000;
-        int starterFields = 0;
         if (args.length > 0) {
             try {
                 gameOfLife = new table(Integer.valueOf(args[0]), Integer.valueOf(args[2]), Integer.valueOf(args[3]));
