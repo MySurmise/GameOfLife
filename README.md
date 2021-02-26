@@ -1,10 +1,8 @@
 # Game Of Life
 
-You can run this little program in your command line interface or other terminal.
+This is going to be an application with a Java Framework, I just don't know which yet.
 
-Make sure to comment in/out the correct characters because e.g. in CMD only * and spaces will work.
 
-In my VS Code Output console, ⬜ and ⬛ also work, which makes for a much better "playing field".
 
 This is my first little project and I made it so I can experiment with GitHub.
 
