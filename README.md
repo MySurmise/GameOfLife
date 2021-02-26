@@ -2,7 +2,8 @@
 
 You can run this little program in your command line interface or other terminal.
 
-Make sure to comment in/out the correct characters because e.g. in CMD only * and spaces will work.
+Make sure to comment in/out the correct characters because e.g. in CMD only stars and spaces will work.
+Also be sure to have the right font selected, so nothing gets shifted.
 
 In my VS Code Output console, ⬜ and ⬛ also work, which makes for a much better "playing field".
 
