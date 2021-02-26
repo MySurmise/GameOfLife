@@ -4,32 +4,41 @@ import java.lang.Runtime;
 public class table {
 
     public static void main(String... args) {
+        
+        /* test with commands
         try {
             Process p = Runtime.getRuntime().exec("C:\\Windows\\System32\\chcp.com 65001");
         } catch (Exception e) {
             e.printStackTrace();
             throw new Error("Didn't work!");
         }
+        */
+        
+        
         table gameOfLife;
         int waitTime = 1000;
+        int starterFields = 0;
         if (args.length > 0) {
             try {
                 gameOfLife = new table(Integer.valueOf(args[0]), Integer.valueOf(args[2]), Integer.valueOf(args[3]));
+                gameOfLife.randomAssign(Integer.valueOf(args[4]));
                 waitTime = Integer.valueOf(args[1]);
+                
             } catch (Exception e) {
                 throw new Error(e
-                        + " Try following Syntax: 'java table <size> <waitTime between prints> <minNeighbors> <maxNeighbors>'");
+                        + "Syntax: 'java table <size> <waitTime between prints in ms> <minNeighbors> <maxNeighbors> <number of random chosen living fields>'\nOnly use numbers!");
             }
         } else {
-            gameOfLife = new table(35, 3, 3);
+            gameOfLife = new table(35, 2, 3);
+            gameOfLife.randomAssign(15);
         }
         // gameOfLife.printtable();
-        // gameOfLife.randomAssign(55);
+        
         gameOfLife.printtable();
-        gameOfLife.valTable[20][20][0] = true;
-        gameOfLife.valTable[20][21][0] = true;
-        gameOfLife.valTable[21][20][0] = true;
-        gameOfLife.valTable[21][21][0] = true;
+        // gameOfLife.valTable[20][20][0] = true;
+        // gameOfLife.valTable[20][21][0] = true;
+        // gameOfLife.valTable[21][20][0] = true;
+        // gameOfLife.valTable[21][21][0] = true;
         gameOfLife.printtable();
         gameOfLife.propagate(1000, true, waitTime);
     }
